@@ -6,16 +6,20 @@ $kid->setSex('rady');
 
 $kid->setName('理香子');
 
+$kid->setAge(15);
+
 $kid->showName();
 
 
 class Kid{
     public $name;
     public $sex;
+    public $age;
 
     function __construct(){
         $this->name = 'Seed';
         $this->sex = 'boy';
+        $this->age = 10;
     }
 
     public function setSex($seibetu){
@@ -29,7 +33,7 @@ class Kid{
 
 
 // 男性の時と女性の時で条件分岐をさせたい。
-        public function setName($namae){
+    public function setName($namae){
         $this->name=$namae;
     }
 
@@ -37,13 +41,23 @@ class Kid{
         return $this->name;
     }
 
-    public function showName(){
-        if($this->sex== 'boy'){
-                echo "$this->name".'くん';
-        }elseif($this->sex== 'rady'){
-        echo "$this->name".'ちゃん';
+    public function setAge($nennrei){
+        $this->age=$nennrei;
     }
-}
+
+    public function getAge(){
+        return $this->age;
+    }
+
+    public function showName(){
+        if ($this->age>=12) {
+            if($this->sex== 'boy'){
+                    echo "$this->name".'くん';
+                }elseif($this->sex== 'rady'){
+                    echo "$this->name".'ちゃん';
+            }
+        }
+    }
 
 }
 
