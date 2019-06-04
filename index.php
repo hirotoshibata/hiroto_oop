@@ -8,6 +8,7 @@ $kid->showSex();
 
 
 
+
 class Kid{
     // 時速の値を保持するプロパティ
     public $name;
