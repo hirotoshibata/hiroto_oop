@@ -2,15 +2,14 @@
 
 $kid = new Kid();
 
+$kid->setSex('rady');
 
-$kid->showSex();
+$kid->setName('理香子');
 
-
-
+$kid->showName();
 
 
 class Kid{
-    // 時速の値を保持するプロパティ
     public $name;
     public $sex;
 
@@ -19,39 +18,34 @@ class Kid{
         $this->sex = 'boy';
     }
 
-    public function showSex($seibetu){
-        if($seibetu== 'boy'){
-            echo $this->name;
-        }elseif($seibetu== 'rady'){
-            echo $this->name;
-        }
+    public function setSex($seibetu){
+        $this->sex=$seibetu;
     }
 
-    public function setName($namae){
-        $this->name=$namae
+    public function getSex(){
+        return $this->sex;
+    }
+// ここまでは性別と初期値の設定なのであっている。
+
+
+// 男性の時と女性の時で条件分岐をさせたい。
+        public function setName($namae){
+        $this->name=$namae;
     }
 
-    // public function getSpeed(){
-    //     return $this->speed;
-    // }
+    public function getName(){
+        return $this->name;
+    }
 
- 
-
-    // public function greeting(){
-    //     $this->start();
-    //     $this->run();
-    //     $this->stop();
-    
-
-
+    public function showName(){
+        if($this->sex== 'boy'){
+                echo "$this->name".'くん';
+        }elseif($this->sex== 'rady'){
+        echo "$this->name".'ちゃん';
+    }
 }
 
-// $car = new Car();
-
-// $car->setSpeed(60);
-
-// $car->greeting();
-
+}
 
 
 
