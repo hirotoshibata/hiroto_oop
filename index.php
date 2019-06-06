@@ -6,15 +6,15 @@
 
     $kid->setName('理香子');
 
-    $kid->setAge(8);
+    $kid->setAge(12);
 
     $kid->showName();
 
 
     class Kid{
-        public $name;
-        public $sex;
-        public $age;
+        private $name;
+        private $sex;
+        private $age;
 
         function __construct(){
             $this->name = 'Seed';
@@ -56,7 +56,7 @@
                     }elseif($this->sex== 'rady'){
                         echo "$this->name".'さん';
                 }
-            }elseif($this->age<=12){
+            }elseif($this->age<12){
                 if($this->sex== 'boy'){
                         echo "$this->name".'くん';
                     }elseif($this->sex== 'rady'){
